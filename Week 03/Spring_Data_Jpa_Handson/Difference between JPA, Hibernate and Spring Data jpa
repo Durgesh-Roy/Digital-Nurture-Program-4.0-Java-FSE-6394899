@@ -1,0 +1,45 @@
+Following are the difference between JPA, Hibernate and Spring Data JPA
+
+1. JPA (Java Persistence API)
+•	Specification (i.e., an interface, not an implementation).
+•	Defined in Java EE / Jakarta EE.
+•	Provides a standard API for Object-Relational Mapping (ORM) in Java.
+•	Introduced by Sun Microsystems to standardize persistence in Java applications.
+•	Uses annotations or XML for mapping Java classes to database tables.
+•	Defines operations like EntityManager, persist(), merge(), remove(), find().
+
+Limitations:
+•	You must write a lot of boilerplate code (queries, setup).
+•	No built-in repository abstraction.
+
+ 2. Hibernate
+
+•	A popular ORM framework and JPA implementation.
+•	Before JPA, Hibernate was already widely used.
+•	Hibernate implements JPA and also provides many advanced features beyond JPA.
+•	Implements the JPA API.
+•	Has its own powerful native APIs (like Session, Criteria, HQL).
+•	Offers extra features like:
+Caching
+Lazy/eager loading
+Dirty checking
+Better performance tuning
+
+       Additional Capabilities:
+•	Hibernate allows you to write HQL (Hibernate Query Language).
+•	Supports native SQL queries.
+•	More flexible than pure JPA in real-world use cases.
+
+ 3. Spring Data JPA
+
+•	A Spring framework module built on top of JPA (typically uses Hibernate internally).
+•	Adds abstraction layer over JPA to reduce boilerplate code.
+•	Provides ready-to-use repository interfaces (JpaRepository, CrudRepository, etc.)
+•	No need to write queries manually for simple CRUD operations.
+•	Uses method name conventions to generate queries.
+•	Supports JPQL, native SQL, and @Query annotation for custom queries.
+•	Integrates with Spring Boot easily for rapid development.
+Benefits:
+•	Reduces boilerplate code.
+•	Makes code more readable and maintainable.
+•	Great for rapid development.
